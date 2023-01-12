@@ -15,6 +15,6 @@ If Host Key Verification fails, try typing in your ssh [email] one more time and
 ![Imgur](https://i.imgur.com/X1QOtqT.png)
 
 Next, enter your passwood. You should now see a notice:
-![Imgur](https://imgur.com/ZHavivS)
+![Imgur](https://i.imgur.com/HZfcObz.png)
 
 This notice will be followed up by a bunch of other stats. You are now logged in!
