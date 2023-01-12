@@ -12,9 +12,9 @@ Type in $ ssh cs15lwi23ABC@ieng6.ucsd.edu, replacing ABC with whatever your cour
 
 It is fine if it says it can't verify the authenticity, assuming this is your first time logging in. Type yes. 
 If Host Key Verification fails, try typing in your ssh [email] one more time and write yes again. This worked for me.
-![Imgur](https://i.imgur.com/X1QOtqT.png)
+![Imgur](https://i.imgur.com/wpJWANh.png)
 
-Next, enter your passwood. You should now see a notice:
+Next, enter your passwood. You should now see a notice if you entered it correctly:
 ![Imgur](https://i.imgur.com/HZfcObz.png)
 
 This notice will be followed up by a bunch of other stats. You are now logged in!
