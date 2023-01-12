@@ -1,10 +1,10 @@
-#How Do We Log Into A Course Specific Account?
+# How Do We Log Into A Course Specific Account?
 
-##Download Visual Studio Code:
+## Download Visual Studio Code:
 If you have not already, please download VS Code here: https://code.visualstudio.com/
 ![Imgur](https://i.imgur.com/yuZtLMO.png)
 
-##Logging in on Visual Studio
+## Logging in on Visual Studio
 Open the terminal using the command Ctrl `
 
 Type in $ ssh cs15lwi23ABC@ieng6.ucsd.edu, replacing ABC with whatever your course-specific account has
