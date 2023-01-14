@@ -3,9 +3,10 @@
 ## Download Visual Studio Code:
 If you have not already, please download VS Code here: https://code.visualstudio.com/
 ![Imgur](https://i.imgur.com/yuZtLMO.png)
+Follow all of the install instructions and open it up on your computer.
 
 ## Logging in on Visual Studio
-Open the terminal using the command Ctrl `
+To log into your account, you'll need to open your terminal. Open the terminal using the command Ctrl `. Make sure you open the git based terminal and not a different kind.
 
 Type in $ ssh cs15lwi23ABC@ieng6.ucsd.edu, replacing ABC with whatever your course-specific account has
 ![Imgur](https://i.imgur.com/h8UAZIi.png)
