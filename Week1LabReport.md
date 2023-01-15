@@ -1,4 +1,4 @@
-# How Do We Log Into A Course Specific Account?
+# CSE 15L Lab Report Week 1
 
 ## Download Visual Studio Code:
 If you have not already, please download VS Code here: https://code.visualstudio.com/
