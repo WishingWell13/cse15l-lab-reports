@@ -1,3 +1,71 @@
+## Part 1
+Here is my code for my StringServer. It consists of the StringHandler and StringServer classes.
+
+```
+import java.io.IOException;
+import java.net.URI;
+
+class StringHandler implements URLHandler {
+    // The string state on server
+    String myString = "";
+
+    public String handleRequest(URI url) {
+        if (url.getPath().equals("/")) {
+            return String.format("Current string: %s", myString);
+        } 
+        // else if (url.getPath().contains("/add-message")) {
+        //     String[] parameters = url.getQuery().split("=");
+        //     if (parameters[0].equals("s")) {
+        //         myString += parameters[1] + "\n";
+        //         return myString;
+        //     }else{
+        //          return "invalid query";
+        //      }
+        // }
+        else if(url.getPath().equals("/clear")){
+            myString = "";
+            return "Cleared!";
+        }
+        else {
+            System.out.println("Path: " + url.getPath() + url.getQuery());
+            if (url.getPath().contains("/add-message")) {
+                String[] parameters = url.getQuery().split("=");
+                if (parameters[0].equals("s")) {
+                    myString += parameters[1] + "\n";
+                    return myString;
+                }
+            }
+            return "404 Not Found!";
+        }
+    }
+}
+
+public class StringServer {
+    public static void main(String[] args) throws IOException {
+        if(args.length == 0){
+            System.out.println("Missing port number! Try any number between 1024 to 49151");
+            return;
+        }
+
+        int port = Integer.parseInt(args[0]);
+
+        Server.start(port, new StringHandler());
+    }
+}
+
+
+```
+
+Here, we call the default path (without any queries) in our handleRequest method in our StringHandler class. As we can see, we start out with an empty string.
+<img width="496" alt="image" src="https://user-images.githubusercontent.com/54158686/215242978-1ea0ef91-6980-46db-976e-281c86d46adb.png">
+
+
+<img width="362" alt="image" src="https://user-images.githubusercontent.com/54158686/215243233-0d8868b2-322d-4a22-af51-d59e9a14e1c5.png">
+<img width="331" alt="image" src="https://user-images.githubusercontent.com/54158686/215243319-c17d29e5-1217-4588-966c-c49a865e3810.png">
+
+
+
+## Part 2
 #### Failure inducing input:
 This test inputs an array of length three into the ArrayExamples.reverseInPlace function. The tester is below.
 ```
