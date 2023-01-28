@@ -92,6 +92,7 @@ Originally, I thought none of the values were swapping. However, after some prin
 To fix the code, we can make a temporary variable to store the value we are going to overwrite. Then, we can use that temporary variable to assign to the variable that we just used to swap at the beginning (arr[arr.length - i - 1]). Finally, we cut the loop in half, since we are replacing values from both the beginning and end of the loop in each repetition.
 
 Original code:
+
 ```
 // Changes the input array to be in reversed order
   static void reverseInPlace(int[] arr) {
@@ -122,10 +123,17 @@ static void reverseInPlace(int[] arr) {
 This test inputs an array of length 1 to the ArrayExamples.reverseInPlace function. The tester is below. There are no symptoms.
 ```
 @Test 
-	public void testReverseInPlace() {
+public void testReverseInPlace() {
     int[] input1 = { 3 };
     ArrayExamples.reverseInPlace(input1);
     assertArrayEquals(new int[]{ 3 }, input1);
-	}
+}
 ```
-
+	   
+  
+## Part 3
+I leanred that you can make web servers in Java this week! Before, I thought Javascript, HTML, and CSS were the dedicated languages for web development, but this is not the case. Also, I learned about the difference between a web server, a web page, and a web site. A web server is the brain of an operation, handling requests for URLs with web pages. So it is the part that moves and stores data. A web page is a single page that displays what the web server does. A web site is a collection of linked web pages that users can use to trigger different commands within the web server.
+	    
+	    
+	    
+	    
