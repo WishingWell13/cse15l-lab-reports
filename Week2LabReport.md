@@ -1,4 +1,6 @@
 ## Part 1
+This part focuses on creating a web server.
+
 Here is my code for my StringServer. It consists of the StringHandler and StringServer classes.
 
 ```
@@ -56,18 +58,22 @@ public class StringServer {
 
 ```
 
-Here, we call the default path (without any queries) in our handleRequest method in our StringHandler class. As we can see, we start out with an empty string. No fields change.
+At the begining of each server start, we create a new StringHandler that will help us with our requests. 
+
+Here, we call the default path (without any queries) in our handleRequest method in our StringHandler class. This changes our URI to http://localhost:4000/. As we can see, we start out with an empty string. No other fields change.
 <img width="496" alt="image" src="https://user-images.githubusercontent.com/54158686/215242978-1ea0ef91-6980-46db-976e-281c86d46adb.png">
 
-Next, we try adding the string "<string>" to the string list using the path /add-message. We can see that it is successfully appended. We call the same handleRequest method, but it goes to the else part of the if else statement. Relevant arguments include the s to denote that we are passing in a string, and the message after the equal sign which is what we add to the string. The myString field of my code is updated to contain the passed in string.
+Next, we try adding the string "<string>" to the string list using the path /add-message. We can see that it is successfully appended. The URI field becomes http://localhost:4000/add-message?s=<string>. We call the same handleRequest method, but it goes to the else part of the if else statement. Relevant arguments include the s to denote that we are passing in a string, and the message after the equal sign which is what we add to the string. The myString field of my code is updated to contain the passed in string.
 <img width="362" alt="image" src="https://user-images.githubusercontent.com/54158686/215243233-0d8868b2-322d-4a22-af51-d59e9a14e1c5.png">
 
-We pass in hello again to test if we can add multiple strings in a row. We can! The relevant inputs are as before, but with the input being "hello" instead of "<string>".
+We pass in hello again to test if we can add multiple strings in a row. We can! The URI field becomes http://localhost:4000/add-message?s=hello. The relevant inputs are as before, but with the input being "hello" instead of "<string>".
 <img width="331" alt="image" src="https://user-images.githubusercontent.com/54158686/215243319-c17d29e5-1217-4588-966c-c49a865e3810.png">
 
 
 
 ## Part 2
+This part focuses on learning how to debug our code.
+	
 #### Failure inducing input:
 This test inputs an array of length three into the ArrayExamples.reverseInPlace function. The tester is below.
 ```
@@ -132,7 +138,7 @@ public void testReverseInPlace() {
 	   
   
 ## Part 3
-I leanred that you can make web servers in Java this week! Before, I thought Javascript, HTML, and CSS were the dedicated languages for web development, but this is not the case. Also, I learned about the difference between a web server, a web page, and a web site. A web server is the brain of an operation, handling requests for URLs with web pages. So it is the part that moves and stores data. A web page is a single page that displays what the web server does. A web site is a collection of linked web pages that users can use to trigger different commands within the web server.
+I learned that you can make web servers in Java this week! Before, I thought Javascript, HTML, and CSS were the dedicated languages for web development, but this is not the case. Also, I learned about the difference between a web server, a web page, and a web site. A web server is the brain of an operation, handling requests for URLs with web pages. So it is the part that moves and stores data. A web page is a single page that displays what the web server does. A web site is a collection of linked web pages that users can use to trigger different commands within the web server.
 	    
 	    
 	    
