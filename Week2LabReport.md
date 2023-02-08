@@ -63,11 +63,11 @@ At the begining of each server start, we create a new StringHandler that will he
 Here, we call the default path (without any queries) in our handleRequest method in our StringHandler class. This changes our URI to <http://localhost:4000/>. As we can see, we start out with an empty string. No other fields change.
 <img width="496" alt="image" src="https://user-images.githubusercontent.com/54158686/215242978-1ea0ef91-6980-46db-976e-281c86d46adb.png">
 
-Next, we try adding the string "<string>" to the string list using the path /add-message. We can see that it is successfully appended. The URI field becomes http://localhost:4000/add-message?s=<string>. We call the same handleRequest method, but it goes to the else part of the if else statement. Relevant arguments include the s to denote that we are passing in a string, and the message after the equal sign which is what we add to the string. The myString field of my code is updated to contain the passed in string.
+Next, we try adding the string "\<string\>" to the string list using the path /add-message. We can see that it is successfully appended. The URI field becomes http://localhost:4000/add-message?s=<string>. We call the same handleRequest method, but it goes to the else part of the if else statement. Relevant arguments include the s to denote that we are passing in a string, and the message after the equal sign which is what we add to the string. The myString field of my code is updated to contain the passed in string.
 
 <img width="362" alt="image" src="https://user-images.githubusercontent.com/54158686/215243233-0d8868b2-322d-4a22-af51-d59e9a14e1c5.png">
 
-We pass in hello again to test if we can add multiple strings in a row. We can! The URI field becomes <http://localhost:4000/add-message?s=hello>. The relevant inputs are as before, but with the input being "hello" instead of "<string>". 
+We pass in hello again to test if we can add multiple strings in a row. We can! The URI field becomes <http://localhost:4000/add-message?s=hello>. The relevant inputs are as before, but with the input being "hello" instead of "\<string\>". 
 
 <img width="331" alt="image" src="https://user-images.githubusercontent.com/54158686/215243319-c17d29e5-1217-4588-966c-c49a865e3810.png">
 
