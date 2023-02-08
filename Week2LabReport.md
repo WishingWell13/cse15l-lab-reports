@@ -63,9 +63,6 @@ At the begining of each server start, we create a new StringHandler that will he
 Here, we call the default path (without any queries) in our handleRequest method in our StringHandler class. This changes our URI to <http://localhost:4000/>. As we can see, we start out with an empty string. No other fields change.
 <img width="496" alt="image" src="https://user-images.githubusercontent.com/54158686/215242978-1ea0ef91-6980-46db-976e-281c86d46adb.png">
 	
-<a href="http://localhost:4000/add-message?s=&lt;string&gt;" >http://localhost:4000/add-message?s=<string></a>.
-	
-[localhost:4000/add-message?s=<string>](http://localhost:4000/add-message?s=<string>)
 Next, we try adding the string "\<string\>" to the string list using the path /add-message. We can see that it is successfully appended. The URI field becomes:
 
 	
