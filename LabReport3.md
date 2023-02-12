@@ -35,7 +35,8 @@ Here is another example. Let's say I forgot to submit my scholarship application
 
 ![image](https://user-images.githubusercontent.com/54158686/218286247-f78f5ab7-af10-45a2-a6a0-9b00a24e4b64.png)
 
-```grep -r cheap
+```
+grep -r cheap
 written_2/non-fiction/OUP/Abernathy/ch15.txt:The most effective weapon used by American capital in weakening the power of organized labor has been to hire immigrant workers....[I]mmigrants are cheap and controllable. The conditions they toil under make a mockery of the already low American labor standards—the most regressive among the advanced industrial nations.20 
 written_2/non-fiction/OUP/Abernathy/ch2.txt:A full-blown textile industry therefore blossomed in New England, fostered by the region’s access to abundant water power, capital, mechanical skills, and a hardworking labor force. But the adoption of steam power in New England was delayed until the 1850s and 1860s, at which time most of the significant water-power sites 
 were already in use. The efficiency of steam engines had by then been greatly improved through the use of better materials, and their operating costs reduced by cheaper transportation 
