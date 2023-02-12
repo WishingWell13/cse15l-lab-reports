@@ -29,11 +29,13 @@ on their ships before they began the long journey back to Europe with their carg
 ```
 
 ![image](https://user-images.githubusercontent.com/54158686/218286338-c28f5c18-7480-4210-9a1e-ebb6fc22bb16.png)
+
 Even though we are passing in a directory (our working directory in this case), grep still works! Notice how grep also searches through all the subdirectories within our current directory and spits out the file name, which it did not do before.
 
 Here is another example. Let's say I forgot to submit my scholarship applications, and now I need a cheap place to vacation. I can use the command ```grep -r cheap``` to find all the places that will be cheap to vacation at!
 
 ![image](https://user-images.githubusercontent.com/54158686/218286247-f78f5ab7-af10-45a2-a6a0-9b00a24e4b64.png)
+
 
 ```
 grep -r cheap
@@ -49,6 +51,7 @@ to expand south, particularly in North and South Carolina, Georgia, and Alabama.
 I have only included the first few outputs; this command prints out much more! If we only care about the file names, sifting through all this information is very cumbersome. We can add the -l command to help us with this! -l makes it so grep only returns the file names, without any of the matching text.
 
 ```grep -r -l Lucayans```
+
 
 ```
 [cs15lwi23aon@ieng6-202]:skill-demo1-data:266$ grep -r -l Lucayans
