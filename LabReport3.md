@@ -176,8 +176,46 @@ A lot of options! Notice that none of the files that showed up in the **-l** com
 
 
 ## The -c Option
-```grep -c cheap```
+What if I just want to know how many lines contain the word Lucayans? I can use the command ```grep -r -c Lucayans```.
+
+![image](https://user-images.githubusercontent.com/54158686/218287560-b14ebc43-449a-4db9-bc6d-d42e45f26908.png)
+
+```
+written_2/travel_guides/berlitz2/Athens-Intro.txt:0
+written_2/travel_guides/berlitz2/Athens-WhatToDo.txt:0
+written_2/travel_guides/berlitz2/Athens-WhereToGo.txt:0
+written_2/travel_guides/berlitz2/Bahamas-History.txt:2
+written_2/travel_guides/berlitz2/Bahamas-Intro.txt:0
+written_2/travel_guides/berlitz2/Bahamas-WhatToDo.txt:0
+written_2/travel_guides/berlitz2/Bahamas-WhereToGo.txt:0
+```
+Notice that _written_2/travel_guides/berlitz2/Bahamas-History.txt_ is the only file with a value greater than zero. This is why we only see the Bahamas-History file in our output for ```grep -r Lucayans```!
+
+We can apply this same concept to our vacation example. I want to see which place has the most cheap options. Let's find out with the command:
+
+```grep -r -c cheap```. 
 
 ![image](https://user-images.githubusercontent.com/54158686/218286311-34e7d7d9-831c-4541-abe0-9814a78b2ee6.png)
 
-As you can see, written_2/travel_guides/berlitz2/Poland-WhatToDo.txt has three mentions of the word cheap! Maybe I'll plan my next vacation for there...
+```
+written_2/travel_guides/berlitz2/Nepal-WhereToGo.txt:3
+written_2/travel_guides/berlitz2/NewOrleans-History.txt:0
+written_2/travel_guides/berlitz2/Paris-WhatToDo.txt:1
+written_2/travel_guides/berlitz2/Paris-WhereToGo.txt:0
+written_2/travel_guides/berlitz2/Poland-History.txt:0
+written_2/travel_guides/berlitz2/Poland-WhatToDo.txt:3
+written_2/travel_guides/berlitz2/Portugal-History.txt:0
+written_2/travel_guides/berlitz2/Portugal-WhatToDo.txt:2
+written_2/travel_guides/berlitz2/Portugal-WhereToGo.txt:1
+written_2/travel_guides/berlitz2/PuertoRico-History.txt:0
+written_2/travel_guides/berlitz2/PuertoRico-WhatToDo.txt:1
+written_2/travel_guides/berlitz2/PuertoRico-WhereToGo.txt:2
+written_2/travel_guides/berlitz2/Vallarta-History.txt:0
+written_2/travel_guides/berlitz2/Vallarta-WhatToDo.txt:0
+written_2/travel_guides/berlitz2/Vallarta-WhereToGo.txt:1
+```
+
+As you can see, written_2/travel_guides/berlitz2/Poland-WhatToDo.txt has three mentions of the word cheap! Maybe I'll plan my next vacation for there after all...
+
+## Closing Thoughts
+That is four different options for the grep command! We were able to search for all files in a directory with **-r**, only return file names with **-l**, only return non-matching files with **-L**, and return the number of times a word is mentioned with **-c**.
