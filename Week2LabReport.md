@@ -102,7 +102,8 @@ We get the following ***symptom:***
 
 ![image](https://user-images.githubusercontent.com/54158686/218288781-25197e9d-04b2-4959-82d8-492f31735bea.png)
 
-Specifically, focus here:	
+Specifically, focus here:
+
 <img width="470" alt="image" src="https://user-images.githubusercontent.com/54158686/215160886-b567b082-331e-4529-9108-664caec01bf6.png">
 
 At element 2 we expected the output to be 3 but got 9 instead. 3 was the first element of the array.
