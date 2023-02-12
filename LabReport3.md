@@ -1,5 +1,7 @@
-In this lab report, we shall explore the options -r, -l, -L, and -c. I've included screenshots and codeblocks of output to highlight parts of the output and show the colors.
+# The Grep Command
+In this lab report, we shall explore the options **-r, -l, -L**, and **-c** for the grep command. I've included screenshots and codeblocks of output to highlight parts of the output and show the colors. I found all my commands at this link: https://man7.org/linux/man-pages/man1/grep.1.html
 
+## Default Behavior
 Grep highlights all the words that match our search, and only prints out lines in the file that contains our word. Here is some output for grep using no extra command-line options: ```grep Lucayans written_2/travel_guides/berlitz2/Bahamas-History.txt ```
 
 ```
@@ -10,6 +12,7 @@ The Spaniards never bothered to settle in the Bahamas, but the number of shipwre
 replenish the supplies of water on their ships before they began the long journey back to Europe with their cargoes of South American gold. As for the Lucayans, within 25 years all of them, perhaps some 30,000 people, were removed from the Bahamas to work — and die — in Spanish gold mines and on farms and pearl fisheries on Hispaniola (Haiti), Cuba, and elsewhere in the Caribbean.
 ```
 
+## The -r Option
 This is useful if we already know what file we want to search, but what if we want to find files with the word "Lucayans"? In this case, we case use the -r command to recursively search through many directories.
 ```grep -r Lucayans```
 
@@ -41,6 +44,7 @@ along with newer and more productive technology. As a result, after 1880 the ind
 to expand south, particularly in North and South Carolina, Georgia, and Alabama. By 1920, over half of the spinning and weaving capacity was in the South, leading industrialization there. By 1980, little of this basic part of the textile industry remained in New England.     
 ```
 
+## The -l Option
 I have only included the first few outputs; this command prints out much more! If we only care about the file names, sifting through all this information is very cumbersome. We can add the -l command to help us with this! -l makes it so grep only returns the file names, without any of the matching text.
 
 ```grep -r -l Lucayans```
@@ -54,12 +58,124 @@ written_2/travel_guides/berlitz2/Bahamas-History.txt
 
 Much cleaner! Now I know the exact file name that contains the word "Lucayans". We can do something similar for our cheap vacation example too.
 
-```grep -r -L Lucayans ```
+```
+[cs15lwi23aon@ieng6-202]:skill-demo1-data:267$ grep -r -l cheap
+written_2/non-fiction/OUP/Abernathy/ch15.txt
+written_2/non-fiction/OUP/Abernathy/ch2.txt
+written_2/non-fiction/OUP/Abernathy/ch3.txt
+written_2/non-fiction/OUP/Rybczynski/ch2.txt
+written_2/travel_guides/berlitz1/HistoryFWI.txt
+written_2/travel_guides/berlitz1/HistoryHongKong.txt
+written_2/travel_guides/berlitz1/HistoryIndia.txt
+written_2/travel_guides/berlitz1/HistoryItaly.txt
+written_2/travel_guides/berlitz1/HistoryLasVegas.txt
+written_2/travel_guides/berlitz1/IntroItaly.txt
+written_2/travel_guides/berlitz1/IntroMallorca.txt
+written_2/travel_guides/berlitz1/WhatToEgypt.txt
+written_2/travel_guides/berlitz1/WhatToGreek.txt
+written_2/travel_guides/berlitz1/WhatToHongKong.txt
+written_2/travel_guides/berlitz1/WhatToIbiza.txt
+written_2/travel_guides/berlitz1/WhatToIndia.txt
+written_2/travel_guides/berlitz1/WhatToIsrael.txt
+written_2/travel_guides/berlitz1/WhatToIstanbul.txt
+written_2/travel_guides/berlitz1/WhatToItaly.txt
+written_2/travel_guides/berlitz1/WhatToJapan.txt
+written_2/travel_guides/berlitz1/WhatToLasVegas.txt
+written_2/travel_guides/berlitz1/WhatToMadeira.txt
+written_2/travel_guides/berlitz1/WhatToMallorca.txt
+written_2/travel_guides/berlitz1/WhereToEdinburgh.txt
+written_2/travel_guides/berlitz1/WhereToFrance.txt
+written_2/travel_guides/berlitz1/WhereToHongKong.txt
+written_2/travel_guides/berlitz1/WhereToIbiza.txt
+written_2/travel_guides/berlitz1/WhereToIndia.txt
+written_2/travel_guides/berlitz1/WhereToIsrael.txt
+written_2/travel_guides/berlitz1/WhereToItaly.txt
+written_2/travel_guides/berlitz1/WhereToJapan.txt
+written_2/travel_guides/berlitz1/WhereToMadeira.txt
+written_2/travel_guides/berlitz1/WhereToMalaysia.txt
+written_2/travel_guides/berlitz1/WhereToMallorca.txt
+written_2/travel_guides/berlitz2/Algarve-WhatToDo.txt
+written_2/travel_guides/berlitz2/Algarve-WhereToGo.txt
+written_2/travel_guides/berlitz2/Amsterdam-WhatToDo.txt
+written_2/travel_guides/berlitz2/Amsterdam-WhereToGo.txt
+written_2/travel_guides/berlitz2/Bahamas-Intro.txt
+written_2/travel_guides/berlitz2/Bahamas-WhatToDo.txt
+written_2/travel_guides/berlitz2/Bahamas-WhereToGo.txt
+written_2/travel_guides/berlitz2/Bali-WhatToDo.txt
+written_2/travel_guides/berlitz2/Bali-WhereToGo.txt
+written_2/travel_guides/berlitz2/Barcelona-WhatToDo.txt
+written_2/travel_guides/berlitz2/Beijing-WhatToDo.txt
+written_2/travel_guides/berlitz2/Bermuda-WhatToDo.txt
+written_2/travel_guides/berlitz2/Budapest-WhatToDo.txt
+written_2/travel_guides/berlitz2/California-WhatToDo.txt
+written_2/travel_guides/berlitz2/California-WhereToGo.txt
+written_2/travel_guides/berlitz2/Canada-WhereToGo.txt
+written_2/travel_guides/berlitz2/CanaryIslands-History.txt
+written_2/travel_guides/berlitz2/CanaryIslands-WhatToDo.txt
+written_2/travel_guides/berlitz2/Cancun-WhatToDo.txt
+written_2/travel_guides/berlitz2/Cancun-WhereToGo.txt
+written_2/travel_guides/berlitz2/China-WhatToDo.txt
+written_2/travel_guides/berlitz2/Costa-WhatToDo.txt
+written_2/travel_guides/berlitz2/Costa-WhereToGo.txt
+written_2/travel_guides/berlitz2/CostaBlanca-History.txt
+written_2/travel_guides/berlitz2/CostaBlanca-WhatToDo.txt
+written_2/travel_guides/berlitz2/Nepal-WhatToDo.txt
+written_2/travel_guides/berlitz2/Nepal-WhereToGo.txt
+written_2/travel_guides/berlitz2/Paris-WhatToDo.txt
+written_2/travel_guides/berlitz2/Poland-WhatToDo.txt
+written_2/travel_guides/berlitz2/Portugal-WhatToDo.txt
+written_2/travel_guides/berlitz2/Portugal-WhereToGo.txt
+written_2/travel_guides/berlitz2/PuertoRico-WhatToDo.txt
+written_2/travel_guides/berlitz2/PuertoRico-WhereToGo.txt
+written_2/travel_guides/berlitz2/Vallarta-WhereToGo.txt
+```
+A lot of locations with cheap options to chose from! Again, only file names are being printed, not the actual content of the files.
+
+## The -L Option
+
+Now, let's say I just came off a big project reporting on the Lucayans, and I don't want to think about it anymore. What if I want to find all the files that don't mention Lucayans? I can use the command ```grep -r -L Lucayans ```
+
+```
+written_2/travel_guides/berlitz2/Amsterdam-WhatToDo.txt
+written_2/travel_guides/berlitz2/Amsterdam-WhereToGo.txt
+written_2/travel_guides/berlitz2/Athens-History.txt
+written_2/travel_guides/berlitz2/Athens-Intro.txt
+written_2/travel_guides/berlitz2/Athens-WhatToDo.txt
+written_2/travel_guides/berlitz2/Athens-WhereToGo.txt
+written_2/travel_guides/berlitz2/Bahamas-Intro.txt
+written_2/travel_guides/berlitz2/Bahamas-WhatToDo.txt
+written_2/travel_guides/berlitz2/Bahamas-WhereToGo.txt
+written_2/travel_guides/berlitz2/Bali-History.txt
+written_2/travel_guides/berlitz2/Bali-WhatToDo.txt
+written_2/travel_guides/berlitz2/Bali-WhereToGo.txt
+written_2/travel_guides/berlitz2/Barcelona-History.txt
+```
 
 ![image](https://user-images.githubusercontent.com/54158686/218286156-47532184-aa99-4118-9385-f2b387cfd9f4.png)
+
 Notice how the file "Bahamas History" doesn't show up in the file results. Only the files without the words Lucayans shows up!
 
+Let's do the same thing for our vacation example. It turns out, I actually submitted my scholarship applications in my sleep! I don't want to go somewhere cheap anymore. Let's see where I can go using the command ```grep -r -L cheap```
 
+```
+written_2/travel_guides/berlitz1/IntroMadrid.txt
+written_2/travel_guides/berlitz1/IntroMalaysia.txt
+written_2/travel_guides/berlitz1/JungleMalaysia.txt
+written_2/travel_guides/berlitz1/WhatToDublin.txt
+written_2/travel_guides/berlitz1/WhatToEdinburgh.txt
+written_2/travel_guides/berlitz1/WhatToFWI.txt
+written_2/travel_guides/berlitz1/WhatToFrance.txt
+written_2/travel_guides/berlitz1/WhatToHawaii.txt
+written_2/travel_guides/berlitz1/WhatToJamaica.txt
+written_2/travel_guides/berlitz1/WhatToLakeDistrict.txt
+written_2/travel_guides/berlitz1/WhatToLosAngeles.txt
+```
+![image](https://user-images.githubusercontent.com/54158686/218287492-f63125d5-5116-4d59-aa58-e25a41e14ef6.png)
+
+A lot of options! Notice that none of the files that showed up in the **-l** command shows up in this list.
+
+
+## The -c Option
 ```grep -c cheap```
 
 ![image](https://user-images.githubusercontent.com/54158686/218286311-34e7d7d9-831c-4541-abe0-9814a78b2ee6.png)
