@@ -1,3 +1,5 @@
+# Lab Report 2
+
 ## Part 1
 This part focuses on creating a web server.
 
