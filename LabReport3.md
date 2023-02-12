@@ -13,6 +13,7 @@ replenish the supplies of water on their ships before they began the long journe
 ```
 
 ## The -r Option
+### Example 1
 This is useful if we already know what file we want to search, but what if we want to find files with the word "Lucayans"? In this case, we case use the -r command to recursively search through many directories.
 ```grep -r Lucayans```
 
@@ -32,6 +33,7 @@ on their ships before they began the long journey back to Europe with their carg
 
 Even though we are passing in a directory (our working directory in this case), grep still works! Notice how grep also searches through all the subdirectories within our current directory and spits out the file name, which it did not do before.
 
+### Example 2
 Here is another example. Let's say I forgot to submit my scholarship applications, and now I need a cheap place to vacation. I can use the command ```grep -r cheap``` to find all the places that will be cheap to vacation at!
 
 ![image](https://user-images.githubusercontent.com/54158686/218286247-f78f5ab7-af10-45a2-a6a0-9b00a24e4b64.png)
@@ -47,7 +49,10 @@ along with newer and more productive technology. As a result, after 1880 the ind
 to expand south, particularly in North and South Carolina, Georgia, and Alabama. By 1920, over half of the spinning and weaving capacity was in the South, leading industrialization there. By 1980, little of this basic part of the textile industry remained in New England.     
 ```
 
+Here, we see some files that mention the word cheap. For my case, it would probably be better looking through the travel guides instead of non-fiction. 
+
 ## The -l Option
+### Example 1
 I have only included the first few outputs; this command prints out much more! If we only care about the file names, sifting through all this information is very cumbersome. We can add the -l command to help us with this! -l makes it so grep only returns the file names, without any of the matching text.
 
 ```grep -r -l Lucayans```
@@ -60,7 +65,10 @@ written_2/travel_guides/berlitz2/Bahamas-History.txt
 
 ![image](https://user-images.githubusercontent.com/54158686/218286990-4ed84ac2-79f2-41f7-a54e-7d91302d7af8.png)
 
-Much cleaner! Now I know the exact file name that contains the word "Lucayans". We can do something similar for our cheap vacation example too.
+Much cleaner! Now I know the exact file name that contains the word "Lucayans". 
+### Example 2
+
+We can do something similar for our cheap vacation example too. Let's use the command ```grep -r -l cheap```
 
 ```
 [cs15lwi23aon@ieng6-202]:skill-demo1-data:267$ grep -r -l cheap
@@ -140,6 +148,7 @@ A lot of locations with cheap options to chose from! Again, only file names are 
 
 ## The -L Option
 
+### Example 1
 Now, let's say I just came off a big project reporting on the Lucayans, and I don't want to think about it anymore. What if I want to find all the files that don't mention Lucayans? I can use the command ```grep -r -L Lucayans ```
 
 ```
@@ -162,6 +171,7 @@ written_2/travel_guides/berlitz2/Barcelona-History.txt
 
 Notice how the file "Bahamas History" doesn't show up in the file results. Only the files without the words Lucayans shows up!
 
+### Example 2
 Let's do the same thing for our vacation example. It turns out, I actually submitted my scholarship applications in my sleep! I don't want to go somewhere cheap anymore. Let's see where I can go using the command ```grep -r -L cheap```
 
 ```
@@ -183,6 +193,7 @@ A lot of options! Notice that none of the files that showed up in the **-l** com
 
 
 ## The -c Option
+### Example 1
 What if I just want to know how many lines contain the word Lucayans? I can use the command ```grep -r -c Lucayans```.
 
 ![image](https://user-images.githubusercontent.com/54158686/218287560-b14ebc43-449a-4db9-bc6d-d42e45f26908.png)
@@ -198,6 +209,7 @@ written_2/travel_guides/berlitz2/Bahamas-WhereToGo.txt:0
 ```
 Notice that _written_2/travel_guides/berlitz2/Bahamas-History.txt_ is the only file with a value greater than zero. This is why we only see the Bahamas-History file in our output for ```grep -r Lucayans```!
 
+### Example 2
 We can apply this same concept to our vacation example. I want to see which place has the most cheap options. Let's find out with the command:
 
 ```grep -r -c cheap```. 
