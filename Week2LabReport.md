@@ -92,10 +92,17 @@ public void testReverseInPlaceLongArr() {
 	assertArrayEquals(new int[]{ 9, 5, 3 }, input1);
 
 }
+
 ```
 
+![image](https://user-images.githubusercontent.com/54158686/218288797-b2df76e6-ba3c-46b6-a8f2-77e556e52ff0.png)
+
+
 We get the following ***symptom:***
-	
+
+![image](https://user-images.githubusercontent.com/54158686/218288781-25197e9d-04b2-4959-82d8-492f31735bea.png)
+
+Specifically, focus here:	
 <img width="470" alt="image" src="https://user-images.githubusercontent.com/54158686/215160886-b567b082-331e-4529-9108-664caec01bf6.png">
 
 At element 2 we expected the output to be 3 but got 9 instead. 3 was the first element of the array.
@@ -118,8 +125,11 @@ Original code:
       arr[i] = arr[arr.length - i - 1];
     }
   }
+  
 
 ```
+
+![image](https://user-images.githubusercontent.com/54158686/218288809-1a06caf7-b248-4a03-b611-f5ac7deb5b26.png)
 
 Fixed Code:
 ```
@@ -133,9 +143,13 @@ static void reverseInPlace(int[] arr) {
 
 ```
 
+![image](https://user-images.githubusercontent.com/54158686/218288819-a5be4906-1f14-48b1-8d00-3947a0732526.png)
+
+
 
 #### Non-failure inducing input:
-This test inputs an array of length 1 to the ArrayExamples.reverseInPlace function. The tester is below. There are no symptoms.
+This test inputs an array of length 1 to the ArrayExamples.reverseInPlace function. The tester is below. There are no symptoms. The test appears as a dot inside the command line.
+
 ```
 @Test 
 public void testReverseInPlace() {
@@ -144,6 +158,11 @@ public void testReverseInPlace() {
     assertArrayEquals(new int[]{ 3 }, input1);
 }
 ```
+
+![image](https://user-images.githubusercontent.com/54158686/218288836-073fb2ba-29cf-4c17-8707-6e9af0eef6c8.png)
+
+![image](https://user-images.githubusercontent.com/54158686/218288854-208d1aab-1d9f-4274-bfe6-7f6fa057218a.png)
+
 	   
   
 ## Part 3
