@@ -129,6 +129,9 @@ written_2/travel_guides/berlitz2/PuertoRico-WhatToDo.txt
 written_2/travel_guides/berlitz2/PuertoRico-WhereToGo.txt
 written_2/travel_guides/berlitz2/Vallarta-WhereToGo.txt
 ```
+
+![image](https://user-images.githubusercontent.com/54158686/218287838-fb753e6e-301f-46c5-9dbc-a52b4370d096.png)
+
 A lot of locations with cheap options to chose from! Again, only file names are being printed, not the actual content of the files.
 
 ## The -L Option
