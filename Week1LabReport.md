@@ -20,7 +20,7 @@ Next, enter your passwood. You should now see a notice if you entered it correct
 
 This notice will be followed up by a bunch of other stats. You are now logged in!
 
-## Trying Some Commands
+## Accessing Files From Other Accounts
 
 ![image](https://user-images.githubusercontent.com/54158686/212519922-e126bf7f-18f7-4eb4-b16c-54e5773b1f64.png)
 
