@@ -1,6 +1,28 @@
+## Speedrunning Lab 7: Step-by-step guide and tricks to speed up the process.
+
 ### 1. Setup Delete any existing forks of the repository you have on your account
 
+Click on settings, and then scroll down to ```Delete this repository```.
+
+![image](https://user-images.githubusercontent.com/54158686/221384000-dbf2da59-5e21-4adc-a462-2ba4092dc6ac.png)
+
+
+![image](https://user-images.githubusercontent.com/54158686/221383993-bbd35735-6e7c-4849-a09a-5eacb7c9d69a.png)
+
+Then, type in the confirmation message that you would like to delete the repository.
+![image](https://user-images.githubusercontent.com/54158686/221384019-5ebfa32a-4cc2-4a83-b22b-096e2b702120.png)
+
+
 ### 2. Setup Fork the repository
+
+Go to this link: [https://github.com/ucsd-cse15l-w23/lab7](https://github.com/ucsd-cse15l-w23/lab7)
+Click on "fork".
+![image](https://user-images.githubusercontent.com/54158686/221384141-a9140a88-a60a-46b8-8100-1ce4f391ce13.png)
+
+Ignore the fields for now. Click "create fork".
+![image](https://user-images.githubusercontent.com/54158686/221384151-002a2744-2d70-4ef7-8d24-de24ee0fed08.png)
+
+
 
 ### 3. The real deal Start the timer!
 
