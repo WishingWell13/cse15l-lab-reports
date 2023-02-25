@@ -20,6 +20,7 @@ Click on "fork".
 ![image](https://user-images.githubusercontent.com/54158686/221384141-a9140a88-a60a-46b8-8100-1ce4f391ce13.png)
 
 Ignore the fields for now. Click "create fork".
+
 ![image](https://user-images.githubusercontent.com/54158686/221384151-002a2744-2d70-4ef7-8d24-de24ee0fed08.png)
 
 
@@ -31,6 +32,7 @@ Here is a [Stopwatch](https://www.google.com/search?q=stopwatch&rlz=1C1ONGR_enUS
 ### 4. Log into ieng6
 Type "ssh" followed by your login, like this:
 ```ssh cs15lwi23aon@ieng6.ucsd.edu <enter>``` 
+
 ![image](https://user-images.githubusercontent.com/54158686/220795730-5a191b9a-3acf-4f62-9a2a-eccd667004f5.png)
 
 ### 5. Clone your fork of the repository from your Github account
@@ -67,7 +69,8 @@ A screen like this will pop up.
 Use _CTRL-W_ and type ```while(index2 < list2.size())```. Click _<Down> <Down>_ then _<Right>_ 8 times. Click _<Delete>_, and then type ```2```.
 
 In the end, the code snipped should look as follows:
-  ![image](https://user-images.githubusercontent.com/54158686/221382301-1997ecbd-6982-4fea-abd3-7afaabad2fc0.png)
+  
+![image](https://user-images.githubusercontent.com/54158686/221382301-1997ecbd-6982-4fea-abd3-7afaabad2fc0.png)
 
 Use _CTRL-O <Enter>_ to save your changes. Then, exit the terminal with _Ctrl-X_.
 
