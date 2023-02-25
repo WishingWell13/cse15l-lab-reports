@@ -38,7 +38,7 @@ Copy the ssh link with _CTRL-C_, **not** the https link. It should look somethin
 
 ![image](https://user-images.githubusercontent.com/54158686/220795801-b3980059-5cfc-47b8-a8e9-07a30d8e4497.png)
 
-Type ```git clone```, and then press _CTRL-V_, then _<enter>_.
+Type ```git clone```, and then press _CTRL-V_, then \<Enter\> 
 
 ![image](https://user-images.githubusercontent.com/54158686/220796101-372e215e-2ba1-4bc1-83f7-f47554fbe7c9.png)
 
