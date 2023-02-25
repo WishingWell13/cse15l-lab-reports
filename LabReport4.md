@@ -66,7 +66,7 @@ A screen like this will pop up.
 ![image](https://user-images.githubusercontent.com/54158686/221382022-55140452-1f94-41c3-80ac-245230bb98cb.png)
 
 
-Use _CTRL-W_ and type ```while(index2 < list2.size())```. Click _<Down> <Down>_ then _<Right>_ 8 times. Click _<Delete>_, and then type ```2```.
+Use _CTRL-W_ and type ```while(index2 < list2.size())```. Click _\<Down\> \<Down\>_ then _\<Right\>_ 8 times. Click _\<Delete\>_, and then type ```2```.
 
 In the end, the code snipped should look as follows:
   
