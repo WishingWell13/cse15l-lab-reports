@@ -4,6 +4,8 @@
 
 ### 3. The real deal Start the timer!
 
+Here is a [Stopwatch](https://www.google.com/search?q=stopwatch&rlz=1C1ONGR_enUS984US984&sxsrf=AJOqlzXCzP6dtMq20b9HdFy_0bDV8K6Dvg%3A1677364545459&ei=QY36Y8DQG9vAkPIPwIan-A4) on google for you to use. Click on "start" using your mouse.
+
 ### 4. Log into ieng6
 Type "ssh" followed by your login, like this:
 ```ssh cs15lwi23aon@ieng6.ucsd.edu <enter>``` 
@@ -25,20 +27,47 @@ From [Week 3](https://ucsd-cse15l-w23.github.io/week/week3/), copy the commands 
 
 ![image](https://user-images.githubusercontent.com/54158686/220796849-b7482c7f-19b0-492f-b43a-b511f556eea3.png)
 
-Click back onto the terminal, then click _CTRL-V_, then _<enter>_.
+Click back onto the terminal. then click _CTRL-V_. Click <Backspace> 12 times until _ArrayExamples_ is gone, then type ```TestListExamples```. Then click _<enter>_.
 
 ### 7. Edit the code file to fix the failing test
+  
+We can see that the code never terminates. This most likely means that we are incorrectly iterating something inside a while loop. Let us fix that.
 
 First, type ```nano Li<tab>```. This will autocomplete to ```nano ListExamples.java```
   
 ![image](https://user-images.githubusercontent.com/54158686/221382014-8dbe2ed0-6777-4b58-a26f-0cc4afecbe7b.png)
-  
-![image](https://user-images.githubusercontent.com/54158686/221382022-55140452-1f94-41c3-80ac-245230bb98cb.png)
 
 A screen like this will pop up.
-![image](https://user-images.githubusercontent.com/54158686/221382123-1f4cfa2b-d8db-4f2d-a4fd-11284815437e.png)
+
+![image](https://user-images.githubusercontent.com/54158686/221382022-55140452-1f94-41c3-80ac-245230bb98cb.png)
+
+
+Use _CTRL-W_ and type ```while(index2 < list2.size())```. Click _<Down> <Down>_ then _<Right>_ 8 times. Click _<Delete>_, and then type ```2```.
+
+In the end, the code snipped should look as follows:
+  ![image](https://user-images.githubusercontent.com/54158686/221382301-1997ecbd-6982-4fea-abd3-7afaabad2fc0.png)
+
+Use _CTRL-O <Enter>_ to save your changes. Then, exit the terminal with _Ctrl-X_.
 
 
 ### 8. Run the tests, demonstrating that they now succeed
+Click the <Up> Key until you see the commands we ran in test 6. 
+First run ```javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java``` using <Enter>.
+Then run ```java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore TestListExamples``` using <Enter>
+  
+The tests succeed!
+  
+![image](https://user-images.githubusercontent.com/54158686/221382656-b52f05d6-8967-4de4-b60f-e2cd4082f8ef.png)
+
 
 ### 9. Commit and push the resulting change to your Github account (you can pick any commit message!)
+Type ```git add .``` Include the period in what you type.
+Then type ```git commit -m "My Commit Message"```. Feel free to replace "My Commit Message" with any other message.
+
+![image](https://user-images.githubusercontent.com/54158686/221382744-13417612-8d7f-424d-9305-a00add97a3dd.png)
+  
+Finally, type ```git push origin main```. We are done, and hopefully got a quick time!
+
+![image](https://user-images.githubusercontent.com/54158686/221382773-0bc46725-7cc1-4307-a966-5facb5922915.png)
+
+
