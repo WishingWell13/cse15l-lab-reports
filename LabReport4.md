@@ -53,7 +53,7 @@ From [Week 3](https://ucsd-cse15l-w23.github.io/week/week3/), copy the commands 
 
 ![image](https://user-images.githubusercontent.com/54158686/220796849-b7482c7f-19b0-492f-b43a-b511f556eea3.png)
 
-Click back onto the terminal. then click _CTRL-V_. Click <Backspace> 12 times until **ArrayExamples** is gone, then type ```TestListExamples```. Then click _\<Enter\>_.
+Click back onto the terminal. then click _CTRL-V_. Click <Backspace> 12 times until `ArrayExamples` is gone, then type `TestListExamples`. Then click _\<Enter\>_.
 
 ### 7. Edit the code file to fix the failing test
   
