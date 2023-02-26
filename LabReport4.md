@@ -78,9 +78,9 @@ Use _CTRL-O \<Enter\>_ to save your changes. Then, exit the terminal with _Ctrl-
 
 
 ### 8. Run the tests, demonstrating that they now succeed
-Click the <Up> Key until you see the commands we ran in test 6. 
-First run `javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java` using <Enter>.
-Then run `java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore TestListExamples` using <Enter>
+Click the _\<Up\>_ Key until you see the commands we ran in test 6. 
+First run `javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java` using _\<Enter\>_.
+Then run `java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore TestListExamples` using _\<Enter\>_
   
 The tests succeed!
   
