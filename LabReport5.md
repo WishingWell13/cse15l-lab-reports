@@ -60,6 +60,8 @@ cd mixed
 ### Step 4: Check for compile success
 In this step, we compile the code and output the error file to `javac-errors.txt`. We use the `$?` command to check if the last error message was an error message (and not a "compile passed"), and if so, let the student know that they had errors in their code. Otherwise, we print "Compile Success" and move on to the next part of our code.
 
+<img width="454" alt="image" src="https://user-images.githubusercontent.com/54158686/224509973-61ce05a9-7200-4cfb-9f3c-55cdc550ffbb.png">
+
 ```
 javac -cp $CPATH *.java 2>javac-errors.txt
 if [[ $? -ne 0 ]]
@@ -74,6 +76,9 @@ else
 ```
 ### Step 5: Verify that the file has the correct output during runtime
 To verify that the file has the correct output during runtime, we run an internal tester file on the student's class. We save the output of our tester file to `results.txt`. First, we check to see if our tester file outputted _"FAILURES!!!"_ using the **grep** command. We use the -c modifier to count the number of lines that have the word _"FAILURES!!!"_. If there are 0 lines, then the student passed all the test cases, and we let them know they got 100%! If not, we use **grep** to get the line, and then [parameter expansion](https://stackoverflow.com/questions/428109/extract-substring-in-bash) to get the total number of tests ran and the number of tests failed. Subtracting `$TOTAL - $COUNT` gives us the number of tests the student passed!
+
+<img width="458" alt="image" src="https://user-images.githubusercontent.com/54158686/224509961-4bd4cb9e-e9b7-42d4-921f-17ce4d29b661.png">
+
 
 ```
 else
