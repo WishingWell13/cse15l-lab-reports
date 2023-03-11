@@ -12,9 +12,18 @@ As shown below, we simply display that the user has scored 100% on the test case
 ### Incorrect student implementation (runtime error)
 If the student had runtime errors with their code, we let them know that they did not get a 100%, and then display how many they got right over how many tests were run.
 
+<img width="469" alt="image" src="https://user-images.githubusercontent.com/54158686/224473254-438cea27-5a56-411a-ac75-e9a8472b32eb.png">
+
+
 ### Incorrect student implementation (compiler error)
 If the student had compiler errors with their code, we let them know what the error was, highlight it with some text formatting, and then suggest that they check for syntax errors.
 
+<img width="479" alt="image" src="https://user-images.githubusercontent.com/54158686/224473215-f774bd54-8a04-4807-9dad-a29413a6d038.png">
+
+### File not found (either due to not naming or not putting it in the correct file)
+In this case, we simply print to the console that we are unable to find the file, and give the student some advice on why this might be the case.
+
+<img width="556" alt="image" src="https://user-images.githubusercontent.com/54158686/224473384-dfb82be4-9557-4c1c-acae-29370d157560.png">
 
 
 ## Bugs
@@ -61,7 +70,7 @@ if [[ -f "ListExamples.java" ]]
 then
     echo "File found"
 else
-    echo "File not found"
+    echo "File not found. Please make sure you named the file correctly and it is in the correct directory."
     exit 1
 fi
 
@@ -88,7 +97,10 @@ set +e
 javac -cp $CPATH *.java 2>javac-errors.txt
 if [[ $? -ne 0 ]]
 then
+    echo =================== ERROR FOUND ==================
     cat javac-errors.txt
+    echo =================== ERROR FOUND ==================
+    echo "Compile Failed. Please check for syntax error in your code!"
 else
     echo "Compile Success"
     java -cp $CPATH org.junit.runner.JUnitCore TestListExamples >results.txt
