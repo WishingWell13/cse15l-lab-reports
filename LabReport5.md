@@ -223,3 +223,17 @@ else
 fi
 
 ```
+
+## Bonus: Triangles vs Circles
+I also enjoyed the icebreaker during week 8, where we peer reviewed each other's code. Here is what we had to say:
+```
+Discuss with each other and write down your answers to the question of the week: which side would win in a fight? Why? (see writeup)
+Leo: I think the circles would win because baguettes are the superior weapon.
+Diego Nunes: I believe the circles (🔵) would win because although the triangles (🔺) are sturdier, the circles (🔵) are much more mobile and baguettes (🥖) can be hard and sharp as stone (🪨) so they also have better weaponry, giving them a significant advantage in this battle.
+Ian: baguettes win. 
+Ka Chun Leung: I believe that the triangles win. Red always defeats blue.
+Andy: The triangles would win, since the circles would be unable to resist eating the baguettes 
+Jou-Chih Chang: I think the circles would win because baguettes are long and hard
+```
+
+![image](https://user-images.githubusercontent.com/54158686/224510070-72c41413-491c-4b8c-a4a1-c0ceb17a8f7b.png)
