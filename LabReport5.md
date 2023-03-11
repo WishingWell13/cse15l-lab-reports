@@ -2,6 +2,101 @@
 In lab 6, we created a testing script that takes a student-submitted ListExamples file and tests its implementation against our tester file using a bash script. I thought this was super interesting since I always wondered about how the grading was automated in CSE classes. In this report, I'll take you through my implementation of the script, some examples of it working, and some bugs I encountered along the way.
 
 ## Code Walkthrough
+### Step 1: Setup
+In our first step, we set up the workspace by clearing all past submissions with `rm`, resetting file structure with `mkdir`, nand cloning the new file into our repository with `git clone`. If all of this finishes successfully, we print "Finished cloning" to the console.
+
+<img width="347" alt="image" src="https://user-images.githubusercontent.com/54158686/224508752-22643506-d21e-4c14-83c7-25da888da8e9.png">
+
+```
+CPATH='.;lib/hamcrest-core-1.3.jar;lib/junit-4.13.2.jar'
+
+rm -rf student-submission
+mkdir student-submission
+git clone $1 student-submission
+echo 'Finished cloning'
+
+```
+
+### Step 2: Verify student files
+In step 2, we make sure that the student has submitted all the required files. In this case, the student just needs to submit a file named `ListExamples.java`. We use the -f expression to check for the file name. Note that the student must have their file in the home directory, and not nested under some file.
+
+<img width="650" alt="image" src="https://user-images.githubusercontent.com/54158686/224509093-34edcb39-d388-406a-becf-e0c82c923556.png">
+
+```
+if [[ -f "ListExamples.java" ]]
+then
+    echo "File found"
+else
+    echo "File not found. Please make sure you named the file correctly and it is in the correct directory."
+    exit 1
+fi
+```
+
+### Step 3: Set up "mixed" folder
+In step 3, we set up a folder called "mixed" that will hold all of our files. We need all of the files together so we can run javac and java easily, and so that the tester file can access the `ListExamples` file. This step included a lot of cd-ing to different folders and cp statements to copy files, which caused us to be in the wrong folder a few times! We used `ls` and `pwd` while debugging this part of the script to fix these issues.
+
+<img width="200" alt="image" src="https://user-images.githubusercontent.com/54158686/224509319-1def88d5-80b4-4746-9a6f-fcff65dee382.png">
+
+```
+cd ..
+
+rm -rf mixed
+mkdir mixed
+
+cd student-submission
+cp ListExamples.java ../mixed
+
+cd ..
+rm -rf student-submission
+
+
+cp TestListExamples.java mixed
+
+cp -r lib mixed
+
+cd mixed
+```
+
+### Step 4: Check for compile success
+In this step, we compile the code and output the error file to `javac-errors.txt`. We use the `$?` command to check if the last error message was an error message (and not a "compile passed"), and if so, let the student know that they had errors in their code. Otherwise, we print "Compile Success" and move on to the next part of our code.
+
+```
+javac -cp $CPATH *.java 2>javac-errors.txt
+if [[ $? -ne 0 ]]
+then
+    echo =================== ERROR FOUND ==================
+    cat javac-errors.txt
+    echo =================== ERROR FOUND ==================
+    echo "Compile Failed. Please check for syntax error in your code!"
+else
+    echo "Compile Success"
+    # [STEP 5 PAST THIS POINT...]
+```
+### Step 5: Verify that the file has the correct output during runtime
+To verify that the file has the correct output during runtime, we run an internal tester file on the student's class. We save the output of our tester file to `results.txt`. First, we check to see if our tester file outputted _"FAILURES!!!"_ using the **grep** command. We use the -c modifier to count the number of lines that have the word _"FAILURES!!!"_. If there are 0 lines, then the student passed all the test cases, and we let them know they got 100%! If not, we use **grep** to get the line, and then [parameter expansion](https://stackoverflow.com/questions/428109/extract-substring-in-bash) to get the total number of tests ran and the number of tests failed. Subtracting `$TOTAL - $COUNT` gives us the number of tests the student passed!
+
+```
+else
+    echo "Compile Success"
+    java -cp $CPATH org.junit.runner.JUnitCore TestListExamples >results.txt
+    # echo `grep -c "FAILURES!!!" results.txt`
+    # echo `grep "FAILURES!!!" results.txt`
+    
+
+    if [[ `grep -c "FAILURES!!!" results.txt` -ne 0 ]]
+    then
+        echo "Grade is not 100%"
+        RESULT_LINE=`grep "Tests run:" results.txt`
+        COUNT=${RESULT_LINE:25:1}
+        TOTAL=${RESULT_LINE:11:1}
+        SCORE=$(( $TOTAL - $COUNT ))
+        echo "Your Score is"
+        echo "| Score: $SCORE/$TOTAL |"
+    else
+        echo "Grade is 100%"
+    fi
+fi
+```
 
 ## Examples of Script Working
 ### Fully correct student implementation
