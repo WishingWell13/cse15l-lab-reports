@@ -4,12 +4,17 @@ In lab 6, we created a testing script that takes a student-submitted ListExample
 ## Code Walkthrough
 
 ## Examples of Script Working
-### Fully correct implementation
+### Fully correct student implementation
 As shown below, we simply display that the user has scored 100% on the test cases!
 
 <img width="470" alt="image" src="https://user-images.githubusercontent.com/54158686/224472399-22676a28-1c63-4195-b2c7-92667280af0e.png">
 
-### Partially correct implementation
+### Incorrect student implementation (runtime error)
+If the student had runtime errors with their code, we let them know that they did not get a 100%, and then display how many they got right over how many tests were run.
+
+### Incorrect student implementation (compiler error)
+If the student had compiler errors with their code, we let them know what the error was, highlight it with some text formatting, and then suggest that they check for syntax errors.
+
 
 
 ## Bugs
